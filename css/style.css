@@ -421,7 +421,7 @@ nav{
 .shop-heading i{
     color: #fff;
     margin-right: 0;
-    margin-left: 58.5rem;
+    margin-left: 50rem;
     cursor: pointer;
     font-size: 2rem;
     background-color: #292929;
@@ -624,6 +624,55 @@ nav{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+/*********************************** Shopping Cart **********************************/
+.products-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #fff;
+    font-family: calibri;
+}
+.products-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+}
+.product-title{
+    width: 45%;
+}
+.price{
+    width: 15%;
+    border-bottom: 4px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+    width: 30%;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+.total{
+    width: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+.product{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+
 @media(max-width:1190px){
     #main{
         background-size: 1150px;
@@ -913,3 +962,5 @@ nav{
         margin-left: 4rem;
     }
 }
+
+

@@ -2,15 +2,72 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Shopping Cart</title>
+        <title>My Website</title>
         <meta http-equiv="X-UA-Comaptible" content="Ie-edge">
-        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <!-- Title Icon -->
+        <link rel="shortcut icon" href="images/icon.png">
         <!-- Link CSS File -->
-        <link rel="stylesheet" href="css/style-cart.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- Using FontAwersome-->
         <script src="https://kit.fontawesome.com/44d2471dd2.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        
+        <!-- Section : Main -->
+        <section id="main-cart">
+            <!-- Navigation -->
+            <nav>
+                <!-- Logo -->
+                <a href="#" class="logo">Ahmed</a>
+                <!-- Bar Icon -->
+                <div class="toggle"></div>
+                <!-- Menu -->
+                <ul class="menu">
+                    <li><a href="#main">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+                <!-- Language -->
+                <a href="#" class="lang">En</a>
+            </nav>
+        </section>
+        <!-- Section : Shop -->
+        <section id="shop">
+            <!-- Heading -->
+            <div class="shop-heading">
+                <h1>My Shop</h1>
+                <a href="shoppingcart.html"><i class="fa fa-shopping-cart" aria-hidden="true"> <span class="num">0</span></i></a>
+            </div>
+        </section>
+        <!-- Products Container -->
+        <div class="products-container">
+            <!-- Product Container -->
+            <div class="products-header">
+                <h5 class="product-title">PRODUCT</h5>
+                <h5 class="price">PRICE</h5>
+                <h5 class="quantity">QUAINTITY</h5>
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <!-- Products -->
+            <div class="products">
+
+            </div>
+        </div>
+        <!-- Jquery -->
+        <script type="text/javascript" src="js/Jquery.js"></script>
+        <!-- Link JS File -->
+        <script src="js/cart.js"></script>
+        <!-- For Change Bar Icon To "x" -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.toggle').click(function(){
+                    $('.toggle').toggleClass('active')
+                    $('nav ul').toggleClass('active-menu')
+                })
+            })
+        </script>
     </body>
 </html>
