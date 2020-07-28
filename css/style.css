@@ -116,7 +116,7 @@ nav{
     color: rgba(18,17,17,0.4);
     font-size: 14px;
 }
-.social a:hover i{
+.social a i:hover{
     color: #17d1ac;
     transition: all ease 0.5s;
 }
@@ -274,6 +274,7 @@ nav{
 .s-b-text a:hover{
     color: rgba(255,255,255,0.50);
 }
+/* Section : Portfolio */
 #portfolio{
     width: 100%;
     box-sizing: border-box;
@@ -346,6 +347,7 @@ nav{
     height: 100%;
     object-fit: cover;
 }
+/* Contact Button */
 #contact-btn h1{
     font-size: 2rem;
     color: #1e1e1e;
@@ -386,6 +388,138 @@ nav{
     transition: all ease 0.5s;
     font-weight: 700;
 }
+/* Section : Shop */
+#shop{
+    width: 100%;
+    box-sizing: border-box;
+    font-family: calibri;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 2% 20px 2%;
+}
+.shop-heading h1{
+    font-family: calibri;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    padding: 10px 20px;
+    background-color: #292929;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+.shop-heading{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+.shop-heading i{
+    color: #fff;
+    margin-right: 0;
+    margin-left: 58.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: #292929;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    position: relative;
+}
+.shop-box{
+    background-color: #1f1f1f;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 2px 13px rgba(0,0,0,0.3);
+    position: relative;
+}
+.shop-b-container{
+    width: 90%;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.text-overlay{
+    font-family: calibri;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(23,209,172,0.89);
+    display: none;
+}
+.text-overlay h1,p{
+    color: #fff;
+}
+.text-overlay h1{
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+.text-overlay hr{
+    width: 100%;
+    color: #292929;
+    height: 1px;
+}
+.text-overlay p{
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+}
+.shop-item-details{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+.shop-item-price{
+    flex-grow: 1;
+    color: #333;
+    font-family: calibri;
+    font-size: 25px;
+    font-weight: bold;
+}
+.shop-item-button{
+    text-align: right;
+    margin-right: 0;
+    margin-left: 8rem;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+.text-overlay button:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: all ease 0.5s;
+    font-weight: 700;
+}
+.shop-box:hover .text-overlay{
+    display: flex;
+}
+.shop-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Section : Contact Form */
 #contact-form{
     width: 100%;
     height: 90vh;
@@ -517,6 +651,25 @@ nav{
     #contact-form form{
         width: 95% !important;
     }
+    .shop-heading i{
+        margin-left: 50rem;
+    }
+    .text-overlay p{
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        font-size: 25px;
+    }
+    .shop-item-details{
+        margin-top: 4rem;
+    }
+    .shop-item-price{
+        font-size: 2rem;
+    }
+    .shop-item-button{
+        font-size: 1rem;
+        margin-left: 4rem;
+    }
 } 
 @media(max-width:970px){
     #main{
@@ -542,6 +695,26 @@ nav{
     }
     .p-b-container{
         width: 100%;
+    }
+    .shop-heading i{
+        margin-left: 38rem;
+    }
+    .text-overlay h1{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .text-overlay p{
+        margin-top: 1rem;
+    }
+    .shop-item-details{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .shop-item-price{
+        font-size: 2rem;
+    }
+    .shop-item-button{
+        margin-left: 2.5rem;
     }
 }
 @media(max-width:900px){
@@ -593,6 +766,22 @@ nav{
         grid-template-rows: auto;
         height: auto;
         grid-gap: 10px;
+    }
+    .shop-b-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        grid-gap: 10px;
+    }
+    .shop-heading i{
+        margin-left: 34.4rem;
+    }
+    .shop-item-details{
+        margin-top: 1rem;
+        margin-bottom: 1.8rem;
+    }
+    .shop-item-button{
+        margin-left: 7rem;
     }
     #contact-btn h1{
         font-size: 1.4rem;
@@ -646,6 +835,12 @@ nav{
         font-size: 1.2rem;
         margin: 0 10%;
     }
+    .shop-b-container{
+        grid-template-columns: 1fr;
+    }
+    .shop-heading i{
+        margin-left: 18.1rem;
+    }
     .name{
         width: 60%;
     }
@@ -656,10 +851,65 @@ nav{
         left: 50px;
         transform: translate(-10px);
     }
+    .text-overlay h1{
+        font-size: 3.5rem;
+    }
+    .text-overlay hr{
+        margin-bottom: 2rem;
+    }
+    .text-overlay p{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .shop-item-details{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .shop-item-button{
+        font-size: 1.5rem;
+        
+    }
+    .shop-item-price{
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
 }
 @media(max-width:400px){
     .s-box{
         width: 100%;
         height: 400px;
+    }
+    .shop-heading i{
+        margin-left: 8.9rem;
+    }
+    .shop-heading h1{
+        font-size: 1.5rem;
+    }
+    .shop-heading i{
+        font-size: 1.5rem;
+    }
+    .text-overlay h1{
+        font-size: 2rem;
+    }
+    .text-overlay p{
+        font-size: 1.25rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+    }
+    .text-overlay hr{
+        margin-bottom: 0.2rem;
+    }
+    .shop-item-details{
+        margin-top: 1rem;
+    }
+    .shop-item-price{
+        font-size: 2rem;
+        margin-top: 0.2rem;
+    }
+    .shop-item-button{
+        font-size: 1rem;
+        margin-left: 4rem;
     }
 }
