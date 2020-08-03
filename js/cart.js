@@ -111,21 +111,45 @@ function totalCost(products){
 function displayCart(){
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".products-container");
+    let productContainer = document.querySelector(".products");
+    let cartCost = localStorage.getItem('totalCost');
+
     console.log(cartItems);
     if(cartItems && productContainer){
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                <i class="fa fa-window-close" aria-hidden="true"></i>
-                <img scr="../images/${item.tag}.jpg">
+                <i class="fas fa-trash-alt"></i>
+                <img src="./images/${item.tag}.png">
                 <span>${item.name}</span>
             </div>
+            <div class="price">${item.price}</div>
+            <div class="quantity">
+                <i class="fas fa-caret-left"></i>
+                <span> ${item.inCart} </span>
+                <i class="fas fa-caret-right"></i>
+            <div>
+            <div class="total">
+                $${item.inCart * item.price},00
+            </div>
             `
-        })
+        });
+        productContainer.innerHTML += `
+            <div class=""basketTotalContainer>
+                <h4 class="basketTotalTitle">
+                    Basket Total
+                </h4>
+                <h4 class="basketTotal">
+                    $${cartCost},00
+                </h4>
+            </div>
+        `;
     }
 }
+
+
+
 
 onLoadCartNumbers();
 displayCart();
