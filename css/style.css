@@ -116,7 +116,7 @@ nav{
     color: rgba(18,17,17,0.4);
     font-size: 14px;
 }
-.social a i:hover{
+.social a :hover{
     color: #17d1ac;
     transition: all ease 0.5s;
 }
@@ -632,55 +632,38 @@ nav{
     padding-bottom: 100px;
 }
 /*********************************** Shopping Cart **********************************/
-.products-container{
-    max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
+.product-item-box{
+    background-color: #2b2b2b;
+    width: 350px;
+    height: 450px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    position: relative;
+    font-size: 20px;
 }
-.product i{
-    font-size: 25px;
-    color: blue;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.products-container img{
-    width: 60px;
-}
-.products-header{
+.product-item-box img{
     width: 100%;
-    max-width: 650px;
-    display: flex;
-    justify-content: flex-start;
-    border-bottom: 4px solid lightgray;
-    margin: 0 auto;
+    height: 75%;
 }
-.product-title{
-    width: 45%;
+.product-name{
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    margin-left: 15px;
 }
 .price{
-    width: 15%;
-    display: flex;
-    align-items: center;
+    text-align: center;
+    color: #FFF;
 }
 .quantity{
-    width: 30%;
-    display: flex;
-    align-items: center;
+    text-align: center;
+    color: #FFF;
 }
 .total{
-    width: 10%;
-    display: flex;
-    align-items: center;
-}
-.product{
-    width: 45%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid lightgray;
+    text-align: center;
+    color: #FFF;
 }
 .basketTotalContainer{
     display: flex;

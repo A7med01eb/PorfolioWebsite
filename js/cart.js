@@ -108,6 +108,8 @@ function totalCost(products){
     }
 }
 
+
+
 function displayCart(){
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
@@ -119,30 +121,26 @@ function displayCart(){
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class="product">
-                <i class="fas fa-trash-alt"></i>
-                <img src="./images/${item.tag}.png">
-                <span>${item.name}</span>
-            </div>
-            <div class="price">${item.price}</div>
-            <div class="quantity">
-                <i class="fas fa-caret-left"></i>
-                <span> ${item.inCart} </span>
-                <i class="fas fa-caret-right"></i>
-            <div>
-            <div class="total">
-                $${item.inCart * item.price},00
-            </div>
+            <div class="product-item-box">
+                    <img src="./images/${item.tag}.png">
+                <div>
+                    <span class="product-name">${item.name}</span>
+                </div>
+                <div class="price">$${item.price}</div>
+                <div class="quantity">
+                    
+                    <span> ${item.inCart} Picses</span>
+                    
+                </div>
+                <div class="total">
+                    $${item.inCart * item.price},00
+                </div>
             `
         });
         productContainer.innerHTML += `
             <div class=""basketTotalContainer>
-                <h4 class="basketTotalTitle">
-                    Basket Total
-                </h4>
-                <h4 class="basketTotal">
-                    $${cartCost},00
-                </h4>
+                <h4 class="basketTotalTitle">Basket Total</h4>
+                <h4 class="basketTotal">$${cartCost},00</h4>
             </div>
         `;
     }
