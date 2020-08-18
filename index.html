@@ -28,6 +28,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#shop">Shop</a></li>
+                    <li><a href="#drag-drop-text-editor">Drag & Drop</a></li>
                     <li><a href="#contact-form">Contact</a></li>
                 </ul>
                 <!-- Language -->
@@ -61,7 +62,7 @@
         <section id="about">
             <!-- Text -->
             <div class="about-text">
-                <h1About Us></h1>
+                <h1>About Us</h1>
                 <h2>Freelancing FrontEnd Developer</h2>
                 <p>Enjoy the ultimate web design editor. Ahmed is like Photoshóp or Sketch for the web. It brings an 
                 advanced design interface to WordPress that both beginners and experts will fall in love with. 
@@ -310,6 +311,27 @@
                     <img src="images/w6.jpg" alt="shop">
                 </div>
             </div>
+        </section>
+        <!-- Section : Drag & Drop - Text Editor -->
+        <section id="drag-drop-text-editor">
+            <!-- Drag-Drop -->
+            <div class="drag-drop">
+                <div class="dragzone">
+                    <img src="images/icon.png" height="130px" id="dragelement" ondragstart="dragStart(event)">
+                </div>
+                <div class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+                </div>
+
+                <script type="text/javascript" src="js/drag-drop.js"></script>
+            </div>
+            <div class="text-editor">
+                <textarea name="content"></textarea>
+            </div>
+            <script src="ckeditor/ckeditor.js"></script>
+            <script>
+                CKEDITOR.replace('content');
+            </script>
         </section>
         <!-- Section : Contact Form -->
         <section id="contact-form">

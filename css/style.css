@@ -631,6 +631,25 @@ nav{
     margin-top: 50px;
     padding-bottom: 100px;
 }
+#drag-drop-text-editor{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    padding: 50px 5% 0 5%;
+}
+.drag-drop , .text-editor{
+    width: 50%;
+}
+.dragzone , .dropzone{
+    height: 250px;
+    width: 250px;
+    border: 2px solid #FFFFFF;
+    float: left;
+    margin-left: 10px;
+}
 /*********************************** Shopping Cart **********************************/
 .product-item-box{
     background-color: #2b2b2b;
@@ -726,6 +745,10 @@ nav{
     .shop-item-button{
         font-size: 1rem;
         margin-left: 4rem;
+    }
+    .dragzone , .dropzone{
+        height: 160px;
+        width: 160px;
     }
 } 
 @media(max-width:970px){
@@ -931,6 +954,14 @@ nav{
         font-size: 3rem;
         margin-bottom: 0.5rem;
     }
+    .drag-drop{
+        width: 100% !important;
+        float: left;
+    }
+    .text-editor{
+        width: 100% !important;
+    }
+    
 }
 @media(max-width:400px){
     .s-box{
@@ -969,6 +1000,10 @@ nav{
         font-size: 1rem;
         margin-left: 4rem;
     }
+    .drag-drop , .text-editor{
+        width: 100% !important;
+    }
+    
 }
 
 
