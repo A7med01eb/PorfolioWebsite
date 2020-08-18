@@ -671,13 +671,12 @@ nav{
     width: 100%;
     padding: 10px 0;
 }
-.basketTotalTitle{
-    width: 30%;
+.basketTotalTitle , .basketTotal{
+    color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
-.basketTotal{
-    width: 10%;
-}
-
 
 
 
